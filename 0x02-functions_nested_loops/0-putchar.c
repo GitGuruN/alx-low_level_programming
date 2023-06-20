@@ -2,12 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * main - Entry point of the program
- *
- * Return: Always 0 (Success)
+ * _putchar - Entry point of the program
+ * 
+ * Return: Always 1 (Success)
  */
-int _putchar(char)
+int _putchar(char c)
 {
-printf("_putchar\n");
-return (0);
+return (write(1,&c,1));
 }
