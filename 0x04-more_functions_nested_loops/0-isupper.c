@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * _isupper - Checks if a character is uppercase.
  * @c: The character to check
@@ -7,7 +7,7 @@
  */
 int _isupper(int c)
 {
-if (c >= 'A' && c <= 'Z')
+if (c >= 65 && c <= 90)
 {
 return (1);
 }
