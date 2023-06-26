@@ -10,20 +10,16 @@
 void rev_string(char *s)
 {
 int length = 0;
-int start = 0;
-int end;
+int index = 0;
 
-// Calculate the length of the string
-while (s[length] != '\0')
-length++;
-end = length - 1;
-// Reverse the string by swapping characters from both ends
-while (start < end)
+while (s[length++])
 {
-char temp = s[start];
-s[start] = s[end];
-s[end] = temp;
-start++;
-end--;
+length++;
+}
+for (index = length - 1; index >= length / 2; index--)
+{
+char temp = s[index];
+s[index] = s[length - index - 1];
+s[length - index - 1] = temp;
 }
 }
