@@ -15,27 +15,26 @@ int _atoi(char *s)
 int sign = 1;
 int result = 0;
 int i = 0;
+unsigned int ni = 0;
 
-if (s[0] == '-')
+while (s[i])
 {
-sign = -1;
+if (s[i] == 45)
+{
+sign *= -1;
+}
+while (s[i] >= 48 && s[i] <= 57)
+{
+resultat = 1;
+ni = (ni * 10) + (s[i] - '0');
 i++;
 }
-else if (s[0] == '+')
-{
-i++;
-}
-while (s[i] != '\0')
-{
-if (s[i] >= '0' && s[i] <= '9')
-{
-result = result * 10 + (s[i] - '0');
-i++;
-}
-else
+if (resultat == 1)
 {
 break;
-}    
 }
-return (sign * result);
+i++;
+}
+ni *= sign;
+return (ni);
 }
