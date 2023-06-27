@@ -1,16 +1,16 @@
-#include <string.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
- * _strcpy - Copies a string from src to dest.
- * @dest: Pointer to the destination buffer.
- * @src: Pointer to the source string.
+ * _atoi - Converts a string to an integer.
+ * @s: Pointer to the string to be converted.
  *
- * Description: This function copies the string pointed to by src, including the
- * terminating null byte ('\0'), to the buffer pointed to by dest.
+ * Description: This function converts the string pointed to by s to an integer
+ * using the `atoi` function from the standard library.
  *
- * Return: Pointer to the destination buffer (dest).
+ * Return: The converted integer value.
  */
-char *_strcpy(char *dest, char *src)
+int _atoi(char *s)
 {
-return (strcpy(dest, src));
+return (atoi(s));
 }
