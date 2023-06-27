@@ -1,27 +1,28 @@
-#include "main.h"
 #include <stdio.h>
-/*
- *   char *ptr = reverse(STR);
+#include <string.h>
+#include "main.h"
+/**
+ * reverse_string - Reverses a string.
+ * @str: Pointer to the string to be reversed.
  *
- * Reverse the characters of STR[] in place, and return STR.
+ * Description: This function takes a pointer to a string and reverses the order
+ * of the characters in the string using a loop.
  */
-void rev_string(char *s)
+void reverse_string(char *str)
 {
-char ch, *p, *q;
+    int length = strlen(str);
+    int start = 0;
+    int end = length - 1;
 
-  /* Point q at the last character in s[], or at &s[0] if s is empty. */
-for (q = s; *q != '\0'; ++q)
-{
-if (q > s)
---q;
-}
-  /* Simultaneously sweep p from front to back and q from back to front,
-   * swapping characters at p and q, until the pointers meet. */
-for (p = s; p < q; ++p, --q)
-{
-    ch = *p;
-    *p = *q;
-    *q = ch;
-}
-return s;
+    while (start < end)
+    {
+        // Swap characters at start and end indices
+        char temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+
+        // Move indices towards the center
+        start++;
+        end--;
+    }
 }
