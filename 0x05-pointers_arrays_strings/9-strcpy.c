@@ -5,11 +5,13 @@
  * @dest: Pointer to the destination buffer.
  * @src: Pointer to the source string.
  *
- * Description: This function copies the string pointed to by src, including the
+ * Description: This function copies the string pointed to by src,
+ * including the
  * terminating null byte ('\0'), to the buffer pointed to by dest.
  * It returns a pointer to dest.
+ * Return: Pointer to the destination buffer (dest).
  */
 char *_strcpy(char *dest, char *src)
 {
-return strcpy(dest, src);
+return (strcpy(dest, src));
 }
