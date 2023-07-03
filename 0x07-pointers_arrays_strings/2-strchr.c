@@ -6,19 +6,14 @@
  *
  * Return: Pointer to the first occurrence of @c in @s, or NULL if not found
  */
-char *_strchr(char *s, char c);
+char *_strchr(char *s, char c)
 {
-unsigned int i;
-
-for (i = 0; i < *s; i++)
+for (; *s != '\0'; s++)
 {
 if (*s == c)
-{
-return (*s);
+return (s);
 }
-else
-{
+if (c == '\0')
+return (s);
 return (NULL);
-}
-}
 }
