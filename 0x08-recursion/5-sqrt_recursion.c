@@ -8,7 +8,7 @@
  *
  * Return: The square root if the guess is correct, -1 if the guess exceeds the square root.
  */
-int sqrt_recursive(int n, int guess)
+int _sqrt_recursive(int n, int guess)
 {
 if (guess * guess == n)
 {
