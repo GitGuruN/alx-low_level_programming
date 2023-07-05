@@ -20,6 +20,6 @@ return (-1);
 }
 else
 {
-return (sqrt_recursive(n, guess + 1));
+return (_sqrt_recursive(n, guess + 1));
 }
 }
